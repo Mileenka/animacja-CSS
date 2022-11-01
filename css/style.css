@@ -1,0 +1,62 @@
+@keyframes square-animation {
+25% { transform: translateX(300px); }
+50% { transform: translate(300px, 300px); }
+75% { transform: translate(0, 300px); }
+}
+
+@keyframes emoticons-animation {
+    22% { opacity: 1; }
+    28% { opacity: 0; }
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(25, 78, 130);
+}
+
+.bg-square {
+    height: 400px;
+    width: 400px;
+    background-color: rgb(25, 193, 236);
+    border-radius: 10px;
+    box-shadow: 15px 15px 20px -10px rgb(22, 23, 25);
+}
+
+.anim-square {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    /* kwadrat wymagany do zadania  */
+    /* background-color: rgba(161, 201, 241, 0.525); */
+    animation: square-animation 10s linear infinite;
+}
+
+.emoticon {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url('../assets/img/emoticon1.webp') center/cover no-repeat;
+    opacity: 0;
+    animation: emoticons-animation 10s linear infinite;
+    
+}
+
+.anim-square div:nth-child(2) {
+    background-image: url('../assets/img/emoticon2.webp');
+    animation-delay: 2.5s;
+}
+
+.anim-square div:nth-child(3) {
+    background-image: url('../assets/img/emoticon3_1.webp');
+    animation-delay: 5s;
+}
+
+.anim-square div:nth-child(4) {
+    background-image: url('../assets/img/emoticon4_1.webp');
+    animation-delay: 7.5s;
+}
